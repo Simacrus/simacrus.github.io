@@ -4,33 +4,6 @@
     <meta charset="utf-8" />
     <title>Lithium Zero</title>
     <script>
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-
-    <script type="text/javascript">
-
-        $(function() {
-
-            $(window).scroll(function () {
-
-                if ($(this).scrollTop() != 0) {
-
-                    $('#toTop').fadeIn();
-
-                } else {
-
-                    $('#toTop').fadeOut();
-
-                }
-
-            });
-
-        $('#toTop').click(function() {
-
-            $('body,html').animate({ scrollTop: 0 }, 800);
-
-});
-
-});
 
     </script>
 
@@ -57,7 +30,8 @@
             background: linear-gradient(-45deg, #c9202c, #F5A531, #6304de);
             background-size: 400% 300%;
             animation: gradient 10s ease infinite;
-            max-width: 1920px;
+            min-width: 1920px;
+            min-height: 1080px;
         }
 
         @keyframes gradient {
@@ -250,9 +224,25 @@
 
             .stat3:hover {
                 transform: scale(1.1);
+            }   
+            
+            .stat4 {
+            margin-left: 100px;
+            margin-top: 70px;
+            width: 500px;
+            height: 600px;
+            top: 382px;
+            background: #FFFFFF;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+            .stat4:hover {
+                transform: scale(1.1);
             }
 
-        .stryn {
+        .pic {
             width: 450px;
             height: 250px;
             margin-left: 25px;
@@ -297,44 +287,168 @@
             font-family: verdana;
             font-size: 11px;
         }
+
+        .wrapper {
+
+        }
+
+        .content {
+            padding-bottom: 90px;
+        }
+
+        @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+        * {
+            margin: 0; /*обнуление отступов*/
+            padding: 0; /*обнуление полей*/
+            box-sizing: border-box; /*метод расчета размеров бокса*/
+            font-family: 'Poppins', sans-serif; /*название шрифта*/
+        }
+
+        body {
+            display: flex; /*флексбокс сетка*/
+            flex-direction: column; /*направление главной оси*/
+            justify-content: flex-end; /*элементы в конце контейнера*/
+            min-height: 100vh;
+        }
+
+        footer {
+            position: relative; /*относительное позиционирование*/
+            width: 100%; /*на всю ширину*/
+            padding: 20px 50px; /*поля для контента*/
+            background: #151515; /*цвет футера*/
+            display: flex;
+            justify-content: center; /*в центре по горизонтали*/
+            align-items: center; /*в центре по вертикали*/
+            flex-direction: column;
+            margin-top: 100px; /*отступ сверху*/
+        }
+
+            footer .wave {
+                position: absolute; /*абсолютное позиционирование*/
+                top: -100px;
+                left: 0;
+                width: 100%;
+                height: 100px;
+                background: url(wave.png); /*картинка волны*/
+                background-size: 1000px 100px; /*ширина и высота волны*/
+            }
+
+        .social,
+        .menu {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10px 0;
+            flex-wrap: wrap; /*разрешен перенос на новую строку*/
+        }
+
+            .social li,
+            .menu li {
+                list-style: none; /*удалить черные маркеры*/
+            }
+
+                .social li a {
+                    font-size: 2em; /*размер иконок*/
+                    color: #fff; /*цвет иконок*/
+                    margin: 0 10px;
+                    display: inline-block; /*отображать как строчно-блочный элемент*/
+                    transition: 0.5s; /*плавный переход*/
+                }
+
+                .menu li a {
+                    font-size: 1.2em; /*размер ссылок меню*/
+                    color: #fff; /*цвет ссылок меню*/
+                    opacity: 0.75; /*значение прозрачности*/
+                    margin: 0 15px;
+                    text-decoration: none; /*ссылка без подчеркивания*/
+                    display: inline-block;
+                }
+
+                    .menu li a:hover {
+                        opacity: 1;
+                    }
+
+        footer p {
+            color: #fff;
+            text-align: center;
+            margin-top: 15px;
+            font-size: 1.1em;
+        }    
+
     </style>
 </head>
 
 <body>
     <background class="background"></background>
-    <img src="https://psv4.vkuseraudio.net/s/v1/d/_eHc8Dscm6Y-XC9Y912LBhgCX7veB7xcHnzzdmiKjYE8_LdjAZ5DbLrVr0s9PDNVfYvTdVPQNhfEM0qDP460JDY_FJszCsY17J_P5Mj3fuS6Xxf-AuiAeQ/logo.png" alt="LithiumZero" class="logo">
-    <hr class="br" />
-    <button class="but1">
-        <img class="star" src="https://cdn-icons-png.flaticon.com/512/1828/1828970.png">
-        <div class="popstat">Популярные статьи</div>
-    </button>
-    <button class="but2">Все статьи</button>
-    <button class="but3">Последние статьи</button>
-    <img class="profile" src="https://cdn-icons-png.flaticon.com/512/1077/1077063.png" alt="profile">
-    <div class="d1">
-        <form>
-            <input type="text" placeholder="Найдите интересующую вас статью">
-        </form>
+    <div class="wrapper">
+        <img src="https://psv4.vkuseraudio.net/s/v1/d/_eHc8Dscm6Y-XC9Y912LBhgCX7veB7xcHnzzdmiKjYE8_LdjAZ5DbLrVr0s9PDNVfYvTdVPQNhfEM0qDP460JDY_FJszCsY17J_P5Mj3fuS6Xxf-AuiAeQ/logo.png" alt="LithiumZero" class="logo">
+        <hr class="br" />
+        <button class="but1">
+            <img class="star" src="https://cdn-icons-png.flaticon.com/512/1828/1828970.png">
+            <div class="popstat">Популярные статьи</div>
+        </button>
+        <button class="but2">Все статьи</button>
+        <button class="but3">Последние статьи</button>
+        <img class="profile" src="https://cdn-icons-png.flaticon.com/512/1077/1077063.png" alt="profile">
+        <div class="d1">
+            <form>
+                <input type="text" placeholder="Найдите интересующую вас статью">
+            </form>
+        </div>
+        <div class="popular">Популярные статьи</div>
+        <div class="stat1">
+            <img src="https://naukatv.ru/upload/images/xl/5e/5ea3ff7e75da057904e612db7adeee4f790d7d24.jpg" class="pic" />
+            <div class="name">Теория струн</div>
+            <div class="theme">Астрономия</div>
+            <div class="preview">Тео́рия струн — направление теоретической физики, изучающее динамику взаимодействия объектов не как точечных частиц, а как одномерных протяжённых объектов, так называемых...</div>
+        </div>
     </div>
-    <div class="popular">Популярные статьи</div>
-    <div class="stat1">
-        <img src="https://naukatv.ru/upload/images/xl/5e/5ea3ff7e75da057904e612db7adeee4f790d7d24.jpg" class="stryn" />
-        <div class="name">Теория струн</div>
-        <div class="theme">Астрономия</div>
-        <div class="preview">Тео́рия струн — направление теоретической физики, изучающее динамику взаимодействия объектов не как точечных частиц, а как одномерных протяжённых объектов, так называемых...</div>
+
+    <div class="content">
+        <div class="stat2">
+            <img src="https://starmission.ru/wp-content/uploads/2014/03/gravity.jpg" class="pic" />
+            <div class="name">Может ли свет путешествовать по орбите черной дыры?</div>
+            <div class="theme">Астрономия</div>
+            <div class="preview">Рассмотрим этот мысленный эксперимент, который впервые объяснил Ньютон. Представьте, что у вас имеется пушка, которая может стрелять пушечными ядрами очень далеко...</div>
+        </div>
+        <div class="stat3">
+            <img src="https://i.ytimg.com/vi/094y1Z2wpJg/mqdefault.jpg" class="pic" />
+            <div class="name">Гипотеза Коллатца</div>
+            <div class="theme">Математика</div>
+            <div class="preview">Насколько сложной может быть задача, составленная на материале начальной школы: сложении, умножении, делении и чётности/нечётности числа? Оказывается, более 70 лет назад Лотарем Коллатцем...</div>
+        </div>
+        <div class="stat4">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/d/d8/HEUraniumC.jpg" class="pic" />
+            <div class="name">Распределение 239Pu в организме человека</div>
+            <div class="theme">Биотехнологии в медицине</div>
+            <div class="preview">Содержание и распределение плутония было исследованно в тканях 34 человек, погибших от различных причин (включая несчастные случаи). Все они распределены на три группы...</div>
+        </div>
+        <div class="push"></div>
     </div>
-    <div class="stat2">
-        <img src="https://starmission.ru/wp-content/uploads/2014/03/gravity.jpg" class="stryn" />
-        <div class="name">Может ли свет путешествовать по орбите черной дыры?</div>
-        <div class="theme">Астрономия</div>
-        <div class="preview">Рассмотрим этот мысленный эксперимент, который впервые объяснил Ньютон. Представьте, что у вас имеется пушка, которая может стрелять пушечными ядрами очень далеко...</div>
-    </div>
-    <div class="stat3">
-        <img src="https://i.ytimg.com/vi/094y1Z2wpJg/mqdefault.jpg" class="stryn" />
-        <div class="name">Гипотеза Коллатца</div>
-        <div class="theme">Математика</div>
-        <div class="preview">Насколько сложной может быть задача, составленная на материале начальной школы: сложении, умножении, делении и чётности/нечётности числа? Оказывается, более 70 лет назад Лотарем Коллатцем...</div>
-    </div>
-    <div ID="toTop"> ^ Наверх </div>
+
+
+    <footer>
+        <div class="waves">
+            <div class="wave" id="wave1"></div>
+        </div>
+        <ul class="social">
+            <li><a href="https://www.youtube.com/channel/UCTFodBo4jy-HI4GQdonWscA"><ion-icon name="logo-youtube"></ion-icon></a></li>
+            <li><a href="https://vk.com/danyasa"><ion-icon name="logo-vk"></ion-icon></a></li>
+            <li><a href="#"><ion-icon name="logo-instagram"></ion-icon></a></li>
+        </ul>
+        <ul class="menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Team</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <p>©2022 LithiumZero | All Rights Reserved</p>
+    </footer>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
