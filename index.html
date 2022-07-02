@@ -1,0 +1,340 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <title>Lithium Zero</title>
+    <script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
+    <script type="text/javascript">
+
+        $(function() {
+
+            $(window).scroll(function () {
+
+                if ($(this).scrollTop() != 0) {
+
+                    $('#toTop').fadeIn();
+
+                } else {
+
+                    $('#toTop').fadeOut();
+
+                }
+
+            });
+
+        $('#toTop').click(function() {
+
+            $('body,html').animate({ scrollTop: 0 }, 800);
+
+});
+
+});
+
+    </script>
+
+    <style>
+
+        .logo {
+            width: 210px;
+            height: 86px;
+            margin-left: 50px;
+            margin-top: 24px;
+        }
+
+        .br {
+            width: 1821px;
+            height: 0px;
+            margin-left: 25px;
+            margin-top: 10px;
+            border: 1px solid #000000;
+            border-radius: 20px;
+        }
+
+        body {
+            margin: 0%;
+            background: linear-gradient(-45deg, #c9202c, #F5A531, #6304de);
+            background-size: 400% 300%;
+            animation: gradient 10s ease infinite;
+            max-width: 1920px;
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 10% 1%;
+            }
+
+            25% {
+                background-position: 50% 0%;
+            }
+
+            50% {
+                background-position: 75% 0%;
+            }
+
+            75% {
+                background-position: 100% 0%;
+            }
+
+            100% {
+                background-position: 25% 0%;
+            }
+        }
+
+        .but1 {
+            box-sizing: border-box;
+            width: 355px;
+            height: 60px;
+            position: absolute;
+            margin-left: 367px;
+            margin-top: -100px;
+            background: #FFFFFF;
+            border: 3px solid #C4C4C4;
+            border-radius: 15px;
+            font: Judson;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 25px;
+            line-height: 35px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+            .but1:hover {
+                background: #FFE100;
+                transform: scale(1.1);
+            }
+
+        .but2 {
+            box-sizing: border-box;
+            width: 345px;
+            height: 60px;
+            position: absolute;
+            margin-left: 800px;
+            margin-top: -100px;
+            background: #FFFFFF;
+            border: 3px solid #C4C4C4;
+            border-radius: 15px;
+            font: Judson;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 30px;
+            line-height: 35px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+            .but2:hover {
+                background: #FFFFFF;
+                transform: scale(1.1);
+            }
+
+        .but3 {
+            box-sizing: border-box;
+            width: 355px;
+            height: 60px;
+            position: absolute;
+            margin-left: 1200px;
+            margin-top: -100px;
+            background: #FFFFFF;
+            border: 3px solid #C4C4C4;
+            border-radius: 15px;
+            font: Judson;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 30px;
+            line-height: 35px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+            .but3:hover {
+                background: #FFFFFF;
+                transform: scale(1.1);
+            }
+
+        .profile {
+            width: 60px;
+            height: 60px;
+            position: absolute;
+            margin-top: -100px;
+            margin-left: 1770px;
+            cursor: pointer;
+        }
+
+        .star {
+            width: 30px;
+            height: 30px;
+            margin-left: -270px;
+        }
+
+        .popstat {
+            margin-top: -40px;
+            margin-left: 45px;
+        }
+
+        .d1 input {
+            width: 950px;
+            height: 45px;
+            margin-left: 450px;
+            margin-top: 30px;
+            padding-left: 10px;
+            border: 2px solid #7BA7AB;
+            border-radius: 25px;
+            outline: none;
+            background: #FFFFFF;
+            color: #9E9C9C;
+            font-size: 25px;
+        }
+
+        INPUT[type="text"] {
+            color: #000000;
+        }
+
+        .popular {
+            width: 475px;
+            height: 58px;
+            margin-left: 780px;
+            margin-top: 20px;
+            font-family: 'Impact';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 40px;
+            line-height: 59px;
+        }
+
+        .stat1 {
+            margin-left: 100px;
+            margin-top: 50px;
+            width: 500px;
+            height: 600px;
+            top: 390px;
+            background: #FFFFFF;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+            .stat1:hover {
+                transform: scale(1.1);
+            }
+
+        .stat2 {
+            margin-left: 700px;
+            margin-top: -600px;
+            width: 500px;
+            height: 600px;
+            top: 382px;
+            background: #FFFFFF;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+            .stat2:hover {
+                transform: scale(1.1);
+            }
+
+        .stat3 {
+            margin-left: 1300px;
+            margin-top: -600px;
+            width: 500px;
+            height: 600px;
+            top: 382px;
+            background: #FFFFFF;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+            .stat3:hover {
+                transform: scale(1.1);
+            }
+
+        .stryn {
+            width: 450px;
+            height: 250px;
+            margin-left: 25px;
+            margin-top: 20px;
+            border-radius: 25px;
+        }
+
+        .name {
+            margin-left: 25px;
+            font-family: 'Impact';
+            font-weight: 200;
+            font-size: 30px;
+        }
+
+        .theme {
+            margin-left: 25px;
+            margin-top: 5px;
+            font-family: 'Impact';
+            font-size: 17px;
+        }
+
+        .preview {
+            font-family: 'Arial';
+            font-weight: 500;
+            font-size: 30px;
+            margin-left: 15px;
+            margin-top: 5px;
+        }
+
+        #toTop {
+            width: 100px;
+            border: 1px solid #ccc;
+            background: #f7f7f7;
+            text-align: center;
+            padding: 5px;
+            position: fixed;
+            bottom: 10px; /* отступ кнопки от нижнего края страницы*/
+            right: 10px;
+            cursor: pointer;
+            display: none;
+            color: #333;
+            font-family: verdana;
+            font-size: 11px;
+        }
+    </style>
+</head>
+
+<body>
+    <background class="background"></background>
+    <img src="https://psv4.vkuseraudio.net/s/v1/d/_eHc8Dscm6Y-XC9Y912LBhgCX7veB7xcHnzzdmiKjYE8_LdjAZ5DbLrVr0s9PDNVfYvTdVPQNhfEM0qDP460JDY_FJszCsY17J_P5Mj3fuS6Xxf-AuiAeQ/logo.png" alt="LithiumZero" class="logo">
+    <hr class="br" />
+    <button class="but1">
+        <img class="star" src="https://cdn-icons-png.flaticon.com/512/1828/1828970.png">
+        <div class="popstat">Популярные статьи</div>
+    </button>
+    <button class="but2">Все статьи</button>
+    <button class="but3">Последние статьи</button>
+    <img class="profile" src="https://cdn-icons-png.flaticon.com/512/1077/1077063.png" alt="profile">
+    <div class="d1">
+        <form>
+            <input type="text" placeholder="Найдите интересующую вас статью">
+        </form>
+    </div>
+    <div class="popular">Популярные статьи</div>
+    <div class="stat1">
+        <img src="https://naukatv.ru/upload/images/xl/5e/5ea3ff7e75da057904e612db7adeee4f790d7d24.jpg" class="stryn" />
+        <div class="name">Теория струн</div>
+        <div class="theme">Астрономия</div>
+        <div class="preview">Тео́рия струн — направление теоретической физики, изучающее динамику взаимодействия объектов не как точечных частиц, а как одномерных протяжённых объектов, так называемых...</div>
+    </div>
+    <div class="stat2">
+        <img src="https://starmission.ru/wp-content/uploads/2014/03/gravity.jpg" class="stryn" />
+        <div class="name">Может ли свет путешествовать по орбите черной дыры?</div>
+        <div class="theme">Астрономия</div>
+        <div class="preview">Рассмотрим этот мысленный эксперимент, который впервые объяснил Ньютон. Представьте, что у вас имеется пушка, которая может стрелять пушечными ядрами очень далеко...</div>
+    </div>
+    <div class="stat3">
+        <img src="https://i.ytimg.com/vi/094y1Z2wpJg/mqdefault.jpg" class="stryn" />
+        <div class="name">Гипотеза Коллатца</div>
+        <div class="theme">Математика</div>
+        <div class="preview">Насколько сложной может быть задача, составленная на материале начальной школы: сложении, умножении, делении и чётности/нечётности числа? Оказывается, более 70 лет назад Лотарем Коллатцем...</div>
+    </div>
+    <div ID="toTop"> ^ Наверх </div>
+</body>
+</html>
